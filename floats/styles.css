@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page{
+  width: 900px;
+  margin: 0 auto;
+  /*border: 1px solid red;*/
+  overflow: hidden; /*To ignore overflow in floats.*/
+  background-color: #EAEDF0;
+}
+
+.container{
+  overflow: hidden; /*Forcing the comtainer to notice the floated elements*/
+  background-color: #EAEDF0;
+}
+
+.menu {
+  height: 100px;
+  padding: 20px;
+  padding-left: 45%;
+  background-color: #B2D6FF;   /* Medium blue */
+}
+
+.sidebar {
+  float: left; /*CSS floats puts block-levl elements side-by-side
+                 instead of on=top of each other*/
+  padding: 20px;
+  width: 200px;
+  height: 300px;
+  background-color: #F09A9D;   /* Red */
+}
+
+.content {
+  float: left;
+  width: 650px;
+  height: 500px;
+  background-color: #F5CF8E;   /* Yellow */
+  padding: 20px;
+}
+
+.footer {
+  /*clear: both; /*Helps this element ignore the floats in other elements*/
+  /*height: 200px;*/
+  overflow: hidden;
+  background-color: #D6E9FE;   /* Light blue */
+}
+
+.footer-items {
+  float: left;
+  width: 31%; /*percentages are for responsive designs*/
+  margin: 20px 1.15%; /*They shrink and grow as we resize the window*/
+  height: 160px;
+  background-color: #B2D6FF; /*Medium blue*/
+}
+
+.p {
+  margin-bottom: 20px;
+}
+
+.article-image {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 25px;
+  border-radius: 40px;
+  background-color: #D6E9FE;
+}
+
+.username {
+  margin-top: 30px;
+}
+
+.comment {
+  margin: 10px;
+  overflow: hidden;
+}
+
+/*When we have an extra unfloated HTML element at the bottom of a container
+div, we use the clear solution. We can also add an overflow: hidden declaration
+to the container element. The idea is to tell the browser to incorporate floats
+into the height of their container element in order tp show their backgrounds*/

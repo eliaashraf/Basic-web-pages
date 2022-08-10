@@ -1,0 +1,75 @@
+*{ /*Universal CSS selector for resetting styles*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} /*Helps overcome default web browser styles*/
+
+h1, p{
+  background-color: #DDE0E3; /*Light Gray*/
+}
+
+h1{
+  padding: 50px;
+  border-bottom: 1px solid #5D6063; /*Size Style Color*/
+  /*padding: 20px 0 20px 10px; =>Top Right Bottom Left
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;*/
+}
+
+p{
+  padding: 20px 0 20px 10px;
+
+  margin-top: 25px;
+  margin-bottom: 50px; /*Margin collapse can also be avoided by just using
+                         margin-bottom, to horizontally align block-level
+                         elements, use- auto-margins or floats or flexboxes*/
+}
+
+em, strong{
+  background-color: #B2D6FF; /*Light Blue*/
+  display: inline;
+}
+
+/*Cascading button in boxes.html*/
+div{
+  color: #FFF;
+  background-color: #5995DA;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+
+  width: 200px; /*The width of the box minus padding and border*/
+  box-sizing: border-box; /*Actual width of the box*/
+  margin: 20px auto;
+}
+
+body{
+  text-align: center; /*Only aligns contents in the blocks and not the blocks
+                        themselves*/
+}
+
+/*
+Important behaviors associated with block and inline boxes:
+
+=>Block boxes always appear below the previous block element.
+This is the “natural” or “static” flow of an HTML document when it gets
+rendered by a web browser.
+
+=>The width of block boxes is set automatically based on the width of its parent
+ container. In this case, our blocks are always the width of the browser window.
+
+=>The default height of block boxes is based on the content it contains.
+When you narrow the browser window, the <h1> gets split over two lines, and
+its height adjusts accordingly.
+
+=>Inline boxes don’t affect vertical spacing. They’re not for determining
+layout—they’re for styling stuff inside of a block.
+
+=>The width of inline boxes is based on the content it contains, not the width
+of the parent element.
+
+*/

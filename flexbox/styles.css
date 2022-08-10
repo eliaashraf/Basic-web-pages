@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-container {
+  color: #fff;
+  background-color: #5995DA; /*Blue*/
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  /*border: 1px solid #fff; For debugging*/
+  width: 900px;
+  display: flex; /*Turned the menu into a flex container*/
+  justify-content: space-between; /*Spreads out the items across the entire width*/
+}
+
+.links {
+  /*border: 1px solid #fff; For debugging*/
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+.signup {
+  margin-left: auto;
+} /*Helps remove the extra div that grouped .login and .signup*/
+
+.header-container {
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  /*align-items: stretch;*/
+  align-items: center;
+}
+
+/*.subscribe, => For trying out align-items:stretch
+.logo,
+.social {
+  border: 1px solid #5995DA;
+}*/
+
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /*flex-direction: column; Changes from "pushing elements to the next column
+  when running out of space" to "placing elements column-wise" */
+  align-items: center;
+}
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+
+.first-item {
+  order: 1;
+}
+
+.last-item {
+  order: -1;
+}
+
+.social, /*Flex items*/
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
+} /*Flex items are flexible as they can shrink/stretch to match the width of
+    their containers.*/
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1;/*Tells items to stretch to match the width of .footer*/
+}
+
+.footer-one,
+.footer-three { /*To test flexible items*/
+  flex: initial;
+  background-color: #5995DA;
+  width: 300px;
+}
